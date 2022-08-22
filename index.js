@@ -41,7 +41,7 @@ app.get('/users/new', (req, res) => {
 })
 
 app.get('/users/:id', async (req, res) => {
-    const user = await User.findById(req.params.id);  /*populate('activitys')*/
+    const user = await User.findById(req.params.id).populate('style');
     res.render('users/show', { user })
     
 })
@@ -139,8 +139,8 @@ app.delete('/activitys/:id', async (req, res) => {
 
 
 
-app.listen(3000, () => {
-    console.log("APP IS LISTENING ON PORT 3000!")
+app.listen(4000, () => {
+    console.log("APP IS LISTENING ON PORT 4000!")
 })
 
 

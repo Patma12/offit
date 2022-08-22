@@ -10,8 +10,8 @@
 <body>
     <!-- <h1>user.firsName</h1> -->
     <h1>Add A Activity</h1>
-    <form action="/activitys" method="POST">
-        <!-- 1 -->
+    <form action="/farms/<%=farm._id%>/activitys" method="POST">
+        
         <label for="title">Title: </label>
         <input type="text" name="title" id="title" placeholder="product title" ><br>
 
@@ -23,7 +23,11 @@
 
         <label for="date">Date :</label>
         <input type="date" name="date" id="date" placeholder="product date"><br>
-        <!-- 2 -->
+        <select name="style" id="style">
+            <% for(let style of styles){ %>
+            <option value="<%=style%>" <%= activity.style === style ? 'selected': '' %>><%=style%></option>
+            <% } %>
+        </select>
         
         <button>Submit</button>
     </form>
