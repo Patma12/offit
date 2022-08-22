@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Activity</title>
+</head>
+
+<body>
+    <h1>Edit Activity</h1>
+    <form action="/activitys/<%=activity._id%>?_method=PUT" method="POST">
+        <label for="title">title</label>
+        <input type="text" name="title" id="title" placeholder="product title" value="<%= activity.title%>">
+
+        <label for="activityThumbnail">activityThumbnail</label>
+        <input type="text" name="activityThumbnail" id="activityThumbnail" placeholder="product activityThumbnail" value="<%= activity.title%>" >
+
+        <label for="duration">duration</label>
+        <input type="text" name="duration" id="duration" placeholder="product duration" value="<%= activity.duration%>">
+
+        <label for="date">Date</label>
+        <input type="date" name="date" id="date" placeholder="product date" value="<%= activity.date%>">
+
+        <select name="style" id="style">
+            <% for(let style of styles){ %>
+            <option value="<%=style%>" <%= activity.style === style ? 'selected': '' %>><%=style%></option>
+            <% } %>
+        </select>
+        <button>Submit</button>
+    </form>
+
+    <a href="/activitys/<%=activity._id%>">Cancel</a>
+
+</body>
+
+</html>

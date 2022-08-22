@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= activity.title %></title>
+</head>
+
+<body>
+    <h1><%= activity.title%> - duration: <%= activity.duration %> mins</h1>
+    <ul>
+        <li>title: <%= activity.title %></li>
+        <li>activityThumbnail:  <%= activity.activityThumbnail %></li>
+        <li>style:  <%= activity.style %></li>
+        <li>Style: <a href="/activitys?style=<%= activity.style%>"><%= activity.style%></a></li>
+        <li>Date: <a href="/activitys?date=<%= activity.date%>"><%= activity.date%></a></li>
+        <!-- 1 -->
+    </ul>
+    <a href="/activitys">All activitys</a>
+    <a href="/activitys/<%=activity._id%>/edit">Edit activity</a>
+    <form action="/activitys/<%=activity._id%>?_method=DELETE" method="POST">
+        <button>Delete</button>
+    </form>
+
+</body>
+
+</html>

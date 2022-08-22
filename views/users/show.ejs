@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= user.firstName %></title>
+</head>
+
+<body>
+    <h1><%= user.firstName %></h1>
+    <div>
+        <div>FirstName: <%= user.firstName%><br>
+            LastName: <%= user.firstName %><br>
+            Weight: <%= user. weight%><br>
+            Height: <%= user.height %>
+        </div>
+    </div>
+
+    
+    <!-- 1 -->
+    
+    <a href="/activitys">All activitys</a>
+    
+
+    <a href="/users">All Users</a>
+    <form action="/users/<%=user._id%>?_method=DELETE" method="POST">
+        <button>Delete</button></form>
+
+</body>
+
+</html>

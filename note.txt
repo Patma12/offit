@@ -1,0 +1,22 @@
+activity -> new
+
+<!-- action="/users/<%=user._id%>/activitys"  -->
+<!-- 2 <select name="style" id="style">
+            <% for(let style of styles){ %>
+            <option value="<%=style%>" <%= activity.style === style ? 'selected': '' %>><%=style%></option>
+            <% } %>
+</select> -->
+
+
+activity -> show
+ <!-- <li>User: <a href="/users/<%=activity.user._id%>"><%= actibity.user.firsName%></a></li> -->
+
+ users --> show
+ <h2>Products</h2>
+    <ul>
+        <% for(let activity of user.activitys) {%>
+        <li><a href="/activitys/<%=activity.id%>"> <%=activity.title%></a></li>
+        <% } %>
+    </ul>
+    <a href="/activitys">All activitys</a>
+    <a href="/activitys/<%=activity._id%>/edit">Edit Product</a>

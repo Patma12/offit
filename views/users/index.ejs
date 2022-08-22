@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All User</title>
+</head>
+
+<body>
+    <h1>All User</h1>
+    <ul>
+        <% for(let user of users) { %>
+        <li><a href="/users/<%=user._id%>"><%= user.firstName %></a> </li>
+        <% }%>
+    </ul>
+    <a href="/users/new">Add User</a>
+
+</body>
+
+</html>

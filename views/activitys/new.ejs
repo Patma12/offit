@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Activity</title>
+</head>
+
+<body>
+    <!-- <h1>user.firsName</h1> -->
+    <h1>Add A Activity</h1>
+    <form action="/activitys" method="POST">
+        <!-- 1 -->
+        <label for="title">Title: </label>
+        <input type="text" name="title" id="title" placeholder="product title" ><br>
+
+        <label for="activityThumbnail">ActivityThumbnail: </label>
+        <input type="text" name="activityThumbnail" id="activityThumbnail" placeholder="product activityThumbnail" ><br>
+
+        <label for="duration">Duration: </label>
+        <input type="text" name="duration" id="duration" placeholder="product duration" ><br>
+
+        <label for="date">Date :</label>
+        <input type="date" name="date" id="date" placeholder="product date"><br>
+        <!-- 2 -->
+        
+        <button>Submit</button>
+    </form>
+
+</body>
+
+<a href="/activitys">All activitys</a>
+
+</html>
+

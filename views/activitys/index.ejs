@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Activitys</title>
+</head>
+
+<body>
+    <h1><%= style%> Activitys!</h1>
+    
+    
+    <ul>
+        <% for(let activity of activitys) { %>
+        <li><a href="/activitys/<%=activity._id%>"><%= activity.title %></a> </li>
+        <p>ActivityThumbnail:  <%= activity.activityThumbnail %> <br>
+            Style:  <%= activity.style %> <br>
+            Duration: <%= activity.duration %> Mins<br>
+            Date: <%= activity.date %> Mins</p>
+        <% }%>
+    </ul>
+    <a href="/activitys/new">New Activity</a>
+    <%if(style !== 'All') {%>
+    <a href="/activitys">All Activitys</a>
+    <% } %>
+
+</body>
+<a href="/users/new">Add User</a>
+
+</html>
